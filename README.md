@@ -1,0 +1,2 @@
+*Goals*
+* Functional as possible
