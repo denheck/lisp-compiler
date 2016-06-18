@@ -18,5 +18,9 @@
     "karma-jasmine": "^1.0.2",
     "karma-webpack": "^1.7.0",
     "webpack": "^1.13.0"
+  },
+  "dependencies": {
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10"
   }
 }
