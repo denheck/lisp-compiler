@@ -1,6 +1,3 @@
-const START_EXPRESSION = "START_EXPRESSION";
-const END_EXPRESSION = "END_EXPRESSION";
-
 const OPEN_PAREN = "(";
 const CLOSE_PAREN = ")";
 
@@ -8,8 +5,10 @@ const S_EXPRESSION = "S_EXPRESSION";
 const END_S_EXPRESSION = "END_S_EXPRESSION";
 const SYMBOL = "SYMBOL";
 const NUMBER = "NUMBER";
+const EXPRESSION = "EXPRESSION";
+const SEQUENCE = "SEQUENCE";
 
-export const TOKEN_TYPES = { S_EXPRESSION, END_S_EXPRESSION, SYMBOL, NUMBER };
+export const TOKEN_TYPES = { S_EXPRESSION, END_S_EXPRESSION, SYMBOL, NUMBER, EXPRESSION, SEQUENCE };
 
 export const extractCharacter = (arg) => {
     const argType = typeof arg;

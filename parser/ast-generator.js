@@ -3,8 +3,9 @@
  */
 
 import { isStartExpression, isEndExpression, extractCharacter } from "./lib.js";
+import { TOKEN_TYPES } from "../parser/lib";
 
-const NODE_EXPRESSION = "Expression";
+const { EXPRESSION, SEQUENCE } = TOKEN_TYPES;
 
 const astGenerator = (tokens) => {
     const lastTokenPosition = tokens.length - 1;
@@ -14,7 +15,7 @@ const astGenerator = (tokens) => {
         const nextToken = tokens[nextPosition];
 
         if (typeof nextToken !== 'undefined' && isStartExpression(currentToken)) {
-            const type = NODE_EXPRESSION;
+            const type = EXPRESSION;
             const name = extractCharacter(nextToken);
             const nextNextPosition = nextPosition + 1;
             const [newPosition, params] = generateTrees(nextNextPosition);
@@ -41,7 +42,7 @@ const astGenerator = (tokens) => {
     const [, body] = generateTrees(startingPosition);
 
     return {
-        type: 'Program',
+        type: SEQUENCE,
         body
     };
 };

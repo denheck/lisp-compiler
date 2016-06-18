@@ -1,12 +1,12 @@
 import astGenerator from '../../parser/ast-generator.js';
 import { TOKEN_TYPES } from "../../parser/lib.js";
 
-const { S_EXPRESSION, END_S_EXPRESSION, SYMBOL, NUMBER } = TOKEN_TYPES;
+const { S_EXPRESSION, END_S_EXPRESSION, SYMBOL, NUMBER, SEQUENCE, EXPRESSION } = TOKEN_TYPES;
 
 describe("AST Generator", () => {
     it("Will return an AST with an empty body if 0 tokens are provided", () => {
         const expectedAst = {
-            type: 'Program',
+            type: SEQUENCE,
             body: []
         };
 
@@ -15,10 +15,10 @@ describe("AST Generator", () => {
 
     it("Will generate an AST with an Expression for calling the ADD method", () => {
         const expectedAst = {
-            type: 'Program',
+            type: SEQUENCE,
             body: [
                 {
-                    type: 'Expression',
+                    type: EXPRESSION,
                     name: 'ADD',
                     params: [
                         {
