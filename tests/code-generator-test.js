@@ -1,5 +1,5 @@
-import codeGenerator from '../code-generator';
-import { TOKEN_TYPES } from "../parser/lib";
+import codeGenerator from '../compiler/code-generator';
+import { TOKEN_TYPES } from "../compiler/parser/lib";
 
 const { NUMBER, EXPRESSION, SEQUENCE } = TOKEN_TYPES;
 

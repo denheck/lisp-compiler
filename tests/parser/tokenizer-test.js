@@ -1,5 +1,5 @@
-import tokenizer from "../../parser/tokenizer.js";
-import { TOKEN_TYPES } from "../../parser/lib.js";
+import tokenizer from "../../compiler/parser/tokenizer";
+import { TOKEN_TYPES } from "../../compiler/parser/lib";
 
 const { S_EXPRESSION, END_S_EXPRESSION, SYMBOL, NUMBER } = TOKEN_TYPES;
 
